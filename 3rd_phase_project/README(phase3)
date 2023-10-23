@@ -1,0 +1,40 @@
+*bussiness problem*
+This project endeavors to enhance clean water accessibility in Tanzania, a nation with a population of 63.59 million, where only half of the population currently has basic water supply. Collaborating with the Tanzania National Bureau of Statistics and leveraging advanced technology, stakeholders, represented by NGO Danida, aim to identify, prioritize, and repair or replace non-functional water wells. By utilizing a classification model incorporating diverse data points, my goal is to precisely identify wells requiring attention, improving the efficiency of water infrastructure interventions. The objective is to ensure a sustainable supply of clean water, mitigating health and socio-economic challenges faced by vulnerable groups and contributing significantly to the overall well-being of Tanzanian communities and long-term regional development.
+
+The UN-Habitat and key funders in Tanzania are joining forces to address the critical issue of insufficient clean water supply in Tanzanian communities. Despite Tanzania's efforts, 31,000 deaths occur annually due to inadequate water and sanitation, with over 10% preventable. The initiative focuses on evaluating well and water pump functionality. As a data scientist, my role is to analyze patterns in the data, empowering stakeholders with actionable insights to prioritize maintenance and resource allocation. This analysis aims to ensure sustainable access to clean water, saving lives and improving community well-being.
+
+**Aim:**
+My goal in this project is to build a model that predicts the functionality of water points. With this predictive model, authorities can understand which water points are functional, nonfunctional, and functional but it needs to repair. This model can help the Tanzanian government to find likely maintenance needy wells or give useful information for future wells. With this model, we can help the Tanzanian authorities how to use water sources in a productive way. It also helps the investment of the government on wells.
+
+**Solution:**
+
+With 76% accuracy, our model can predict the functionality of wells. With the good prediction of functionality, the solutions can be; 
+
+ - prioritizing functioning wells which need repair and yield clean water
+ - targeting repairs to clusters of wells especially those with high populations
+ - payments of some kind will provide an incentive to keep wells functional
+ - allocate funds and resources to effective organizations with a track record
+
+***Understanding Data:***
+i realized two main challanges in this dataset. Firstly, columns in this data are mostly categorical columns with many unique values with is not understandable for machines. The first challange is to solve this problem. Second challenge is to handle with highly imbalanced multi-target problem. i understood these two challanges with the understanding of data.
+
+ ***Finding Binary Model:***
+ To make my ternary target modeling easily, first i simplified the problem by using multiclassification algorithm
+ 
+***Cleaning and Exploring Data:***
+Mainly, null, zero and missing values changed to mean or collected in a group as named unknown according to nature of the column.
+
+
+**Findings:**
+ - The best result for binary problem is taken by using Random Forest with grid search as 76% balanced accuracy on test set. 
+ - 4272 wells were dried but they have good water quality. With finding a solution to give source again these wells, they can be functional. Finding clean water sources is not the only problem, to continue to feed these sources are equaly important.
+ - 2226 (7%) wells have enough and soft water but needs repair. Authorities must invest on repairing. Otherwise these will be non-functional.
+ - 8035 (27%) wells has enough, good quality water but they are non-functional. This shows that authorities must work and invest on technology to pump these good sources.
+ - Authorties should check again the wells which they funded.
+ - New tecqniques must be found to feed dry wells and repair wells.
+ 
+ 
+
+
+
+
