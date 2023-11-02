@@ -8,7 +8,7 @@ My goal in this project is to build a model that predicts the functionality of w
 
 **Solution:**
 
-With 76% accuracy, our model can predict the functionality of wells. With the good prediction of functionality, the solutions can be; 
+With 76% precission, our model can predict the functionality of wells. With the good prediction of functionality, the solutions can be; 
 
  - prioritizing functioning wells which need repair and yield clean water
  - targeting repairs to clusters of wells especially those with high populations
@@ -16,25 +16,20 @@ With 76% accuracy, our model can predict the functionality of wells. With the go
  - allocate funds and resources to effective organizations with a track record
 
 ***Understanding Data:***
-i realized two main challanges in this dataset. Firstly, columns in this data are mostly categorical columns with many unique values with is not understandable for machines. The first challange is to solve this problem. Second challenge is to handle with highly imbalanced multi-target problem. i understood these two challanges with the understanding of data.
+I realized two main challanges in this dataset. Firstly, columns in this data are mostly categorical columns with many unique values with is not understandable for machines. The first challange is to solve this problem. 
+Second challenge is to handle with highly imbalanced multi-target problem. i understood these two challanges with the understanding of data.
+
+***Cleaning and Exploring Data:***
+Mainly, null, zero and missing values were changed to mean or collected in a group as named "unknown" according to nature of the column.
 
  ***Finding Binary Model:***
- To make my ternary target modeling easily, first i simplified the problem by using multiclassification algorithm
+ To make my ternary target modeling easy,i first simplified the problem by using Binarization and used multiclassification algorithm for modeling
  
-***Cleaning and Exploring Data:***
-Mainly, null, zero and missing values changed to mean or collected in a group as named unknown according to nature of the column.
-
-
 **Findings:**
- - The best result for binary problem is taken by using Random Forest with grid search as 76% balanced accuracy on test set. 
+ - The best result for the binary problem is taken by Random Forest Model with a precision score of 75% and an accuracy score of 71% . 
  - 4272 wells were dried but they have good water quality. With finding a solution to give source again these wells, they can be functional. Finding clean water sources is not the only problem, to continue to feed these sources are equaly important.
  - 2226 (7%) wells have enough and soft water but needs repair. Authorities must invest on repairing. Otherwise these will be non-functional.
  - 8035 (27%) wells has enough, good quality water but they are non-functional. This shows that authorities must work and invest on technology to pump these good sources.
  - Authorties should check again the wells which they funded.
  - New tecqniques must be found to feed dry wells and repair wells.
  
- 
-
-
-
-
